@@ -13,9 +13,9 @@ public class Vector2D {
         this.x = x;
         this.y = y;
     }
-//    public Vector2D clone(){
-//
-//    }
+    public Vector2D clone(){
+        return null;
+    }
 
     public void set(double x, double y){
         this.x = x;
@@ -41,7 +41,9 @@ public class Vector2D {
 
     // tra ra do dai cua vector duoc goi
     public double getLength(){
-        return 0;
+        double length;
+        length = Math.sqrt(Math.pow(this.x,2) + Math.pow(this.y,2));
+        return length;
     }
 
     // giu nguyen huong cua vector duoc goi thay doi do dai =  do dai truyen vao
@@ -57,6 +59,8 @@ public class Vector2D {
 
     // giu nguyen do dai cua vector, quay vector den goc truyen vao
     public void setAngle(double angle){
-
+        double len = this.getLength();
+        this.x = Math.cos(angle)*len;
+        this.y = Math.sin(angle)*len;
     }
 }

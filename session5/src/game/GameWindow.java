@@ -10,7 +10,6 @@ public class GameWindow extends JFrame {
     public static boolean isLeftPress;
     public static boolean isRightPress;
     public static boolean isFirePress;
-    public static boolean isSpecialPress;
 
     public GameWindow() {
         addKeyListener(new KeyAdapter() {
@@ -31,9 +30,6 @@ public class GameWindow extends JFrame {
                 if(e.getKeyCode() == KeyEvent.VK_SPACE) {
                     isFirePress = true;
                 }
-                if(e.getKeyCode() == KeyEvent.VK_Z){
-                    isSpecialPress = true;
-                }
             }
 
             @Override
@@ -52,9 +48,6 @@ public class GameWindow extends JFrame {
                 }
                 if(e.getKeyCode() == KeyEvent.VK_SPACE) {
                     isFirePress = false;
-                }
-                if(e.getKeyCode() == KeyEvent.VK_Z){
-                    isSpecialPress = false;
                 }
             }
         });
